@@ -21,7 +21,7 @@ const Todo = () => {
   };
 
   const handleDelete = (index) => {
-    console.log("handle delete", index)
+    // console.log("handle delete", index)
     let newArr = todos.filter((_, i) => i !== index);
     // newArr.slice(index, 1)
     // console.log("new arr", newArr)
@@ -30,7 +30,16 @@ const Todo = () => {
 
   const onUpdate = (e, i) => {
     console.log("patent update,",e, i);
-    const newArr = todos;
+    let newArr = todos;
+    console.log("new arr", newArr)
+
+    newArr[i] = e;
+
+    console.log('new arr result', newArr)
+    setTodos([...newArr])
+    // console.log('todos', todos)
+
+
     // newArr[i] = newArr;
     // console.log("newArr", newArr)
     // setTodos([...newArr])

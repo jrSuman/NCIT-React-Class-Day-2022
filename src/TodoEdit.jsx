@@ -12,24 +12,26 @@
   // }
   // const {name, age, rollno} = user
 
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 
 const TodoEdit = (props) => {
-  console.log("TodoEdit", props);
+  // console.log("TodoEdit", props);
 
   const { data, onUpdate } = props;
   const [isVisible, setIsVisible] = useState(false);
   const [value, setValue] = useState(data);
 
   const handleChange = (text) => {
-    console.log("text chagne", text)
+    // console.log("text chagne", text)
     setValue(text)
   }
 
   const handleUpdate = () => {
-    console.log("update child")
+    // console.log("update child")
     onUpdate(value)
+    setIsVisible(false)
   }
+
 
   return (
     <div className="">
